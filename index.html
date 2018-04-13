@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  <title>Training 03</title>
+  <style>
+    body { background: #fdfdfd; }
+    .form-group-mini { width: 50%; float: left; padding: 0 10px; }
+    .form-group-mini:first-child { padding-left: 0; }
+    .form-group-mini:last-child { padding-right: 0; }
+    .input-group-addon { min-width: 150px; }
+  </style>
+</head>
+<body>
+
+  <nav class='navbar navbar-default'>
+    <div class='container'>
+      <div class="navbar-header">
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <div class='col-xs-12 col-sm-6 col-sm-offset-3'>
+      <div class='page-header'>
+        <h1>Order now</h1>
+      </div>
+
+      <div class='panel'>
+        <div class='panel-body'>
+          <form>
+            <div class='form-group'>
+              <label id="cardLabel" for="card">Credit card number:</label>
+              <div class='input-group'>
+                <input type="text" class='form-control' id='card' v-model="cardNumber">
+                <div class='input-group-addon' id='type'>{{response}} <img v-if="valid" src="assets/svg/check.svg" alt="V" height="12" width="16.5"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label id="nameLabel" for="name">Name on card:</label>
+              <input type="text" class='form-control' id='name'>
+            </div>
+            <div class='clearfix'>
+              <div class="form-group form-group-mini">
+                <label id="dateLabel" for="date">Expiry date:</label>
+                <input type='text' class='form-control' id="date">
+              </div>
+              <div class="form-group form-group-mini">
+                <label id="cvvLabel" for="cvv">CVV:</label>
+                <input type='text' class='form-control' id="cvv">
+              </div>
+            </div>
+            <br>
+            <p>
+              <button class='btn btn-primary'>Submit</button>
+            </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/assets/js/bundle.js"></script>
+</body>
+</html>
